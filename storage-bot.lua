@@ -6,8 +6,8 @@ local START_POSITION = Vector3.new(0, 5, 0)
 local function genParts()
 	for i=1 , targetParts do
 		local part = Instance.new("Part")
-		part.Size = Vector3.new(math.random(2, 10), 1, 1) -- Taille X aléatoire
-		part.Position = Vector3.new(math.random(-50, 50), 5, math.random(-50, 50)) -- Position aléatoire
+		part.Size = Vector3.new(math.random(2, 10), 1, 1) 
+		part.Position = Vector3.new(math.random(-50, 50), 5, math.random(-50, 50)) 
 		part.Anchored = true
 		part.Parent = ServerStorage
 		part.Name = "Object n°" .. i
@@ -29,7 +29,7 @@ local function alignParts(parts)
 	for _, part in ipairs(parts) do
 		part.Parent = workspace
 		part.Position = Vector3.new(currentX, START_POSITION.Y, START_POSITION.Z)
-		currentX = currentX + part.Size.X + 1 -- Espacement basé sur la taille
+		currentX = currentX + part.Size.X + 1 
 	end
 end
 
